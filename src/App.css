@@ -1,38 +1,309 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top {
+  height: 80vh;
+  background-image: url("./asset/bgTop.png");
+  background-size: cover;
+  background-repeat: none;
+  z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper .top .pic-topright {
   display: flex;
-  flex-direction: column;
+}
+
+.wrapper .top .pic-topright img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  transition: 1s all;
+  z-index: 10;
+}
+
+.navbar ul {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.navbar ul .right-stuff {
+  justify-content: right;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar ul li a,
+.navbar ul li button {
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.navbar ul li a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.products,
+.howto-signup,
+.signup {
+  margin-left: 5vw;
+  position: relative;
+  left: 40vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.wrapper .navbar .signup {
+  width: 178px;
+  height: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#19d371),
+    to(#01ad52)
+  );
+  background: -webkit-linear-gradient(left, #19d371, #01ad52);
+  background: -o-linear-gradient(left, #19d371, #01ad52);
+  background: linear-gradient(90deg, #19d371, #01ad52);
+  border: black;
+  color: white;
+}
+
+.main-text {
+  position: relative;
+  left: 15%;
+  top: 20%;
+  max-width: 432.95px;
+}
+
+.main-text .heading-1,
+.main-text .main-desc {
+  color: white;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.mybtn {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 100;
+  width: 218px;
+  height: 50px;
+  margin-top: 32px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#fb8249),
+    to(#f54b23)
+  );
+  background-image: -webkit-linear-gradient(left, #fb8249, #f54b23);
+  background-image: -o-linear-gradient(left, #fb8249, #f54b23);
+  background-image: linear-gradient(90deg, #fb8249, #f54b23);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+  border: black;
+}
+
+.wrapper .second-nav {
+  text-align: center;
+}
+
+.wrapper .second-nav ul {
+  min-height: 316px;
+  padding-top: 50px;
+  padding-bottom: 56px;
+  display: flex;
+}
+
+.wrapper .second-nav ul li {
+  list-style: none;
+  display: inline-block;
+  height: 100%;
+  width: 29%;
+}
+
+.wrapper .second-nav ul li img {
+  vertical-align: middle;
+}
+
+.wrapper .second-nav ul li .sub-text {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  width: 55%;
+  text-align: center;
+  padding-top: 24px;
+}
+
+.wrapper .info-table {
+  background-image: url("./asset/bgContent.png");
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.info-table .info-heading {
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding-top: 58px;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.info-table .info-p {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  margin: 24px 0px 0px;
+}
+
+.info-table .table-wrapper {
+  width: 68%;
+  background-color: white;
+  margin: 0 auto;
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.5);
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-table .table-wrapper .content {
+  width: 50%;
+  height: 413px;
+}
+
+.info-table .table-wrapper .bgTaikhoan {
+  background-image: url("./asset/bgTaikhoan.jpg");
+  background-size: cover;
+}
+
+.info-table .table-wrapper .info {
+  align-items: center;
+  justify-content: center;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.info-table .table-wrapper .info ul li {
+  list-style: none;
+  padding-top: 20px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: flex-start;
+}
+.info-table .table-wrapper .info ul li img {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+.info-table .table-wrapper .bgVpbankOnline {
+  background-image: url("./asset/bgVpbankOnline.jpg");
+  background-size: cover;
+}
+
+.info-table .table-wrapper .bgATM {
+  background-image: url("./asset/bgATM.jpg");
+  background-size: cover;
+}
+
+.info-table .table-foot {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.info-table .table-foot h1 {
+  color: white;
+  width: 45%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+
+.info-table .table-foot .table-btn {
+  margin: 0 auto;
+}
+
+.wrapper .signup-TKTT {
+  width: 100%;
+  min-height: 500px;
+  padding: 80px 0px 0px;
+}
+
+.wrapper .signup-TKTT h1 {
+  text-align: center;
+}
+
+.wrapper .signup-TKTT .stepwrap {
+  width: 100%;
+  display: flex;
+  flex-direction: rows;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  align-items: flex-start;
+}
+
+.wrapper .signup-TKTT .stepwrap .line {
+  height: 1px;
+  background-color: grey;
+  width: 10%;
+  margin-top: 50px;
+}
+
+.wrapper .signup-TKTT .stepwrap .steps h3 {
+  margin: 0;
+}
+
+.wrapper .signup-TKTT .stepwrap .steps {
+  text-align: center;
+  width: 15%;
+}
+
+.wrapper .signup-TKTT .mybtn {
+  margin: 30px auto;
+}
+
+@media (max-width: 756px) {
+  .info-table .table-wrapper .content {
+    width: 100%;
   }
 }
